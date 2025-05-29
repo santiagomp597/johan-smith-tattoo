@@ -1,0 +1,49 @@
+---
+// src/layouts/MainLayout.astro
+import "../styles/global.css"; // Importa tus estilos globales de Tailwind
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="bg-neutral-900 text-gray-100 font-sans">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  /* Aquí puedes agregar estilos CSS adicionales que sean globales si no quieres usar Tailwind para todo */
+  /* Ejemplo para scroll-behavior */
+  html {
+    scroll-behavior: smooth;
+    body {
+      background: url("../assets/mainBackground.png") no-repeat center center
+        fixed;
+      background-size: cover;
+    }
+  }
+</style>

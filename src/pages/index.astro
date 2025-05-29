@@ -1,23 +1,23 @@
 ---
-// import TattooLogo from '../components/TattooLogo.jsx'; // ejemplo de componente React
+// src/pages/index.astro
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/react/Header.jsx'; // Importamos el componente de React
+import AboutSection from '../components/astro/AboutSection.astro'; // Creamos un componente Astro para About
+import ContactForm from '../components/react/ContactForm.jsx'; // Otro componente de React
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Johan Smith Tattoo</title>
-  </head>
-  <body>
-    <header>
-      <h1>Johan Smith Tattoo</h1>
-      <p>Arte que trasciende la piel</p>
-    </header>
+<MainLayout title="Johan Smith Poveda - Tatuador Profesional" description="Portafolio de tatuajes, contacto y generador de ideas para tu próximo tatuaje.">
+  <Header client:load />
+  <main>
+    <section id="about" class="py-16 md:py-24 max-w-6xl mx-auto px-4">
+      <AboutSection />
+    </section>
 
-    <main>
-      <section>
-        <h2>Próximamente...</h2>
-        <p>Estamos preparando algo increíble. Muy pronto podrás ver el portafolio y generar tu concepto personalizado.</p>
-      </section>
-    </main>
-  </body>
-</html>
+    {/*<section id="contact" class="py-16 md:py-24 bg-gray-800 px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-blue-400">Contacta al Artista</h2>
+      <div class="max-w-2xl mx-auto">
+        <ContactForm client:visible />
+      </div>
+    </section>*/}
+  </main>
+  </MainLayout>
