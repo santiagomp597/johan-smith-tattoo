@@ -27,7 +27,7 @@ function TattooCarousel() {
           modifier: 2.5,
         }}
         autoplay={{
-          delay: 5000,
+          delay: 5000000,
           disableOnInteraction: false,
         }}
         pagination={{ el: '.swiper-pagination', clickable: true }}
