@@ -4,6 +4,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Header from '../components/react/Header.jsx'; // Importamos el componente de React
 import AboutSection from '../components/astro/AboutSection.astro'; // Creamos un componente Astro para About
 import ContactForm from '../components/react/ContactForm.jsx'; // Otro componente de React
+import GallerySection from '../components/astro/GallerySection.astro';
 ---
 
 <MainLayout title="Johan Smith Poveda - Tatuador Profesional" description="Portafolio de tatuajes, contacto y generador de ideas para tu próximo tatuaje.">
@@ -11,6 +12,10 @@ import ContactForm from '../components/react/ContactForm.jsx'; // Otro component
   <main>
     <section id="about" class="py-16 md:py-24 max-w-6xl mx-auto px-4">
       <AboutSection />
+    </section>
+
+    <section id="gallery">
+      <GallerySection />
     </section>
 
     {/*<section id="contact" class="py-16 md:py-24 bg-gray-800 px-4">
