@@ -10,36 +10,42 @@ const { title } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Sitio web de Johan Smith Poveda, artista del tatuaje" />
+    <meta
+      name="description"
+      content="Sitio web de Johan Smith Poveda, artista del tatuaje"
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Roboto+Slab:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="
-    font-roboto text-white bg-gradient-to-b from-black via-red-950 to-black bg-fixed 
-    min-h-screen flex flex-col scroll-smooth
-  ">
-    <div class="pt-24 flex-grow"> {/* pt-24 para dejar espacio al header, flex-grow para que ocupe el espacio restante */}
+  <body class="font-roboto text-white min-h-screen flex flex-col scroll-smooth">
+    <div class="pt-24 flex-grow">
       <slot />
     </div>
   </body>
 </html>
 
 <style is:global>
-  /* Aquí puedes poner cualquier estilo global que no sea fácilmente manejable con Tailwind */
-  /* Aunque con Tailwind y su configuración extendida, esto debería ser mínimo. */
-  html {
-    /* Desactivar scrollbar por defecto si es deseado para ciertos efectos, pero generalmente no recomendado para accesibilidad */
-    /* overflow-y: scroll; */
+  :root {
+    --color-accent: #b44b00;
   }
-  
-  /* Asegura que los enlaces no tengan subrayado por defecto en la aplicación */
-  a {
-    text-decoration: none;
+  html {
+    scroll-behavior: smooth;
+    a {
+      text-decoration: none;
+    }
+    body {
+      background: url("../assets/mainBackground.png") no-repeat center center
+        fixed;
+      background-size: cover;
+    }
   }
 </style>

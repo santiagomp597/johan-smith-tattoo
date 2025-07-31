@@ -33,14 +33,39 @@ import tattoo_image_5 from "../../assets/tattoo_5.jpeg";
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-6xl mb-16"
     >
       <a
+        href="https://www.instagram.com/p/C3i1U2evZ3_/?img_index=1"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="col-span-1 group relative overflow-hidden rounded-lg shadow-lg"
+      >
+        <picture>
+          <source srcset={tattoo_image_5.src} media="(min-width: 768px)" />
+          {/* md: breakpoint de Tailwind */}
+          <source srcset={tattoo_image_5.src} media="(min-width: 640px)" />
+          {/* md: breakpoint de Tailwind */}
+          <img
+            src={tattoo_image_3.src}
+            alt="Tatuaje Blackwork"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+          />
+          {/* Clases de Tailwind para el estilo */}
+        </picture>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+        </div>
+      </a>
+      <a
         href="https://www.instagram.com/p/C7UMSleMgVw/?img_index=1"
         target="_blank"
         rel="noopener noreferrer"
-        class="col-span-1 sm:col-span-2 group relative overflow-hidden rounded-lg shadow-lg"
+        class="col-span-1 group relative overflow-hidden rounded-lg shadow-lg"
       >
         <img
           src={tattoo_image_1.src}
-          alt="Tatuaje estilo comic"
+          alt="Tatuaje Blackwork"
           class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
         />
         <div
@@ -53,28 +78,11 @@ import tattoo_image_5 from "../../assets/tattoo_5.jpeg";
         href="https://www.instagram.com/p/C2e_6cprb8Y/?img_index=1"
         target="_blank"
         rel="noopener noreferrer"
-        class="col-span-1 group relative overflow-hidden rounded-lg shadow-lg"
+        class="col-span-1 relative overflow-hidden rounded-lg shadow-lg"
       >
         <img
           src={tattoo_image_2.src}
-          alt="Tatuaje minimalista"
-          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-        </div>
-      </a>
-
-      <a
-        href="https://www.instagram.com/p/C3i1U2evZ3_/?img_index=1"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="col-span-1 group relative overflow-hidden rounded-lg shadow-lg"
-      >
-        <img
-          src={tattoo_image_3.src}
-          alt="Tatuaje floral"
+          alt="Tatuaje Blackwork"
           class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
         />
         <div
@@ -91,7 +99,7 @@ import tattoo_image_5 from "../../assets/tattoo_5.jpeg";
       >
         <img
           src={tattoo_image_4.src}
-          alt="Tatuaje estilo blackwork"
+          alt="Tatuaje Blackwork"
           class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
         />
         <div
@@ -103,13 +111,26 @@ import tattoo_image_5 from "../../assets/tattoo_5.jpeg";
         href="https://www.instagram.com/p/C7g-Wd3MD_h/?img_index=1"
         target="_blank"
         rel="noopener noreferrer"
-        class="col-span-1 group relative overflow-hidden rounded-lg shadow-lg"
+        class="col-span-1 sm:col-span-2 group relative overflow-hidden rounded-lg shadow-lg"
       >
-        <img
-          src={tattoo_image_5.src}
-          alt="Tatuaje estilo blackwork"
-          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
-        />
+        <picture>
+          <source srcset={tattoo_image_3.src} media="(min-width: 1024px)" />
+          {/* lg: breakpoint de Tailwind */}
+
+          <source srcset={tattoo_image_3.src} media="(min-width: 768px)" />
+          {/* md: breakpoint de Tailwind */}
+
+          <source srcset={tattoo_image_3.src} media="(min-width: 640px)" />
+          {/* md: breakpoint de Tailwind */}
+          <img
+            src={tattoo_image_5.src}
+            alt="Tatuaje Blackwork"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+          />
+          {/* Clases de Tailwind para el estilo */}
+        </picture>
         <div
           class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
@@ -137,7 +158,9 @@ import tattoo_image_5 from "../../assets/tattoo_5.jpeg";
       </div>
     </div>
     <div id="location" class="text-center font-roboto text-lg md:text-xl">
-      <p class="opacity-80">Encuentrame en el estudio Pacific Soul, Bogotá, Colombia</p>
+      <p class="opacity-80">
+        Encuentrame en el estudio Pacific Soul, Bogotá, Colombia
+      </p>
       <p class="opacity-80">Cra. 16a #80 - 94, Edificio Country 82</p>
     </div>
     <div class="w-full max-w-6xl mt-16 rounded-lg overflow-hidden shadow-xl">
