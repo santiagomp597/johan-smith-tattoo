@@ -1,0 +1,74 @@
+---
+import MobileMenu from "../react/MobileMenu.jsx"; // Importa el componente React
+---
+
+<header
+  class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 text-white backdrop-blur-md bg-black"
+>
+  <div class="flex items-center space-x-2 md:space-x-4 ml-10 md:ml-0">
+    <a
+      href="/"
+      class="text-2xl md:text-4xl font-bold font-roboto whitespace-nowrap"
+      >Johan Smith Poveda</a
+    >
+    <span
+      class="text-lg md:text-2xl font-light opacity-80 whitespace-nowrap hidden sm:block"
+      >Tatuador Profesional</span
+    >
+  </div>
+  <nav class="hidden md:block">
+    <ul class="flex items-center space-x-8 text-xl font-roboto">
+      <li>
+        <a
+          href="#about"
+          class="hover:text-red-500 transition-colors duration-300">Acerca de</a
+        >
+      </li>
+      <li>
+        <a
+          href="#portfolio"
+          class="hover:text-red-500 transition-colors duration-300"
+          >Portafolio</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://wa.link/dtj28v"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex px-5 py-2 border border-white rounded-full
+                 hover:bg-white hover:text-black transition-colors duration-300
+                 items-center space-x-2"
+        >
+          <span>Agenda tu cita</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <MobileMenu client:load>
+    <li>
+      <a
+        href="#about"
+        class="hover:text-red-500 transition-colors duration-300 block py-2"
+        >Acerca de</a
+      >
+    </li>
+    <li>
+      <a
+        href="#portfolio"
+        class="hover:text-red-500 transition-colors duration-300 block py-2"
+        >Portafolio</a
+      >
+    </li>
+    <li>
+      <a
+        href="#book-now"
+        class="block px-5 py-2 border border-white rounded-full
+               hover:bg-white hover:text-black transition-colors duration-300 mt-4"
+      >
+        <span>Agenda tu cita</span>
+      </a>
+    </li>
+  </MobileMenu>
+</header>

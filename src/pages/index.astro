@@ -1,28 +1,15 @@
 ---
-// src/pages/index.astro
-import MainLayout from '../layouts/MainLayout.astro';
-import Header from '../components/react/Header.jsx'; // Importamos el componente de React
-import AboutSection from '../components/astro/AboutSection.astro'; // Creamos un componente Astro para About
-import ContactForm from '../components/react/ContactForm.jsx'; // Otro componente de React
-import GallerySection from '../components/astro/GallerySection.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import GlobalHeader from "../components/astro/GlobalHeader.astro";
+import AboutSection from "../components/astro/AboutSection.astro";
+import GallerySection from "../components/astro/GallerySection.astro";
+// Aún no importamos GallerySection, lo haremos en el siguiente paso.
 ---
 
-<MainLayout title="Johan Smith Poveda - Tatuador Profesional" description="Portafolio de tatuajes, contacto y generador de ideas para tu próximo tatuaje.">
-  <Header client:load />
-  <main>
-    <section id="about" class="py-16 md:py-24 max-w-6xl mx-auto px-4">
-      <AboutSection />
-    </section>
-
-    <section id="gallery">
-      <GallerySection />
-    </section>
-
-    {/*<section id="contact" class="py-16 md:py-24 bg-gray-800 px-4">
-      <h2 class="text-4xl font-bold text-center mb-12 text-blue-400">Contacta al Artista</h2>
-      <div class="max-w-2xl mx-auto">
-        <ContactForm client:visible />
-      </div>
-    </section>*/}
-  </main>
-  </MainLayout>
+<MainLayout title="Johan Smith Poveda | Tatuador Profesional">
+  <GlobalHeader />
+  <div class="pt-24 flex-grow">
+    <AboutSection />
+    <GallerySection />
+  </div>
+</MainLayout>

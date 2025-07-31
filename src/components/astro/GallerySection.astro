@@ -1,146 +1,147 @@
 ---
-// src/components/astro/GallerySection.astro
-import TattooCarousel from "../react/TattooCarousel.jsx";
-import separatorImg from "../../assets/separator-orange.png";
-import { Image } from "astro:assets";
-
-const separator = "separador de secciones";
+import tattoo_image_1 from "../../assets/tattoo_1.jpeg";
+import tattoo_image_2 from "../../assets/tattoo_2.jpeg";
+import tattoo_image_3 from "../../assets/tattoo_3.jpeg";
+import tattoo_image_4 from "../../assets/tattoo_4.jpeg";
+import tattoo_image_5 from "../../assets/tattoo_5.jpeg";
 ---
 
-<style is:global>
-    .gallery-wrapper .container {
-        padding: 4rem 1rem;
-        margin: 0 auto;
-    }
-
-    .gallery-wrapper .heading {
-        padding: 1rem 0;
-        font-size: 3.5rem;
-        text-align: center;
-    }
-
-    .gallery-wrapper .swiper_container {
-        height: 52rem;
-        padding: 2rem 0;
-        position: relative;
-    }
-
-    .gallery-wrapper .swiper-slide {
-        width: 37rem;
-        height: 42rem;
-        position: relative;
-    }
-
-    @media (max-width: 500px) {
-        .gallery-wrapper .swiper_container {
-            width: 23rem !important;
-            height: 47rem;
-        }
-        .gallery-wrapper .swiper-slide {
-            width: 23rem !important;
-            height: 36rem !important;
-        }
-        .gallery-wrapper .swiper-slide img {
-            width: 23rem !important;
-            height: 36rem !important;
-        }
-    }
-
-    .gallery-wrapper .swiper-slide img {
-        height: 30rem;
-        border-radius: 1.5rem;
-        object-fit: cover;
-    }
-
-    .gallery-wrapper .slider-controler {
-        position: relative;
-        bottom: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .gallery-wrapper .slider-controler .swiper-button-next {
-        left: 58% !important;
-        transform: translateX(-58%) !important;
-    }
-
-    @media (max-width: 990px) {
-        .gallery-wrapper .slider-controler .swiper-button-next {
-            left: 70% !important;
-            transform: translateX(-70%) !important;
-        }
-    }
-
-    @media (max-width: 450px) {
-        .gallery-wrapper .slider-controler .swiper-button-next {
-            left: 80% !important;
-            transform: translateX(-80%) !important;
-        }
-    }
-
-    @media (max-width: 990px) {
-        .gallery-wrapper .slider-controler .swiper-button-prev {
-            left: 30% !important;
-            transform: translateX(-30%) !important;
-        }
-    }
-
-    @media (max-width: 450px) {
-        .gallery-wrapper .slider-controler .swiper-button-prev {
-            left: 20% !important;
-            transform: translateX(-20%) !important;
-        }
-    }
-
-    .gallery-wrapper .slider-arrow {
-        background: var(--white);
-        width: 3.5rem;
-        height: 3.5rem;
-        border-radius: 50%;
-        left: 42%;
-        transform: translateX(-42%);
-        filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-    }
-
-    .gallery-wrapper .slider-arrow ion-icon {
-        font-size: 2rem;
-        color: #222224;
-    }
-
-    .gallery-wrapper .slider-arrow::after {
-        content: "";
-    }
-
-    .gallery-wrapper .swiper-pagination {
-        position: relative;
-        width: 15rem !important;
-        bottom: 1rem;
-    }
-
-    .gallery-wrapper .swiper-pagination .swiper-pagination-bullet {
-        filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-    }
-
-    .gallery-wrapper .swiper-pagination .swiper-pagination-bullet-active {
-        background: var(--primary);
-    }
-</style>
-
-<div class="gallery-wrapper py-8 px-4 md:px-8 bg-transparent">
-    <div class="text-center">
-        <h2
-            class="font-cinzel text-4xl font-bold mb-6 text-orange-400 drop-shadow-lg"
+<section
+  id="portfolio"
+  class="relative flex flex-col items-center justify-center min-h-screen px-8 py-16 md:px-16 md:py-24 lg:px-32 lg:py-32 text-white overflow-hidden"
+>
+  <div class="max-w-7xl w-full flex flex-col items-center text-center">
+    <h2 class="text-6xl md:text-7xl lg:text-8xl font-cinzel mb-16 relative">
+      <span class="z-10 relative">Portafolio</span>
+      <span
+        class="absolute -left-10 md:-left-16 top-1/2 -translate-y-1/2 text-5xl md:text-6xl font-cinzel opacity-30 rotate-90 transform origin-left"
+        >男</span
+      >
+      <span
+        class="absolute -right-10 md:-right-16 top-1/2 -translate-y-1/2 text-5xl md:text-6xl font-cinzel opacity-30 -rotate-90 transform origin-right"
+        >之</span
+      >
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div
+          class="w-48 h-48 md:w-64 md:h-64 rounded-full border border-gray-600 opacity-20"
         >
-            Mi Trabajo
-        </h2>
-        <div class="max-w-96 h-auto mb-8 mx-auto">
-            <Image
-                class="w-full h-auto grayscale hover:grayscale-0 transition duration-300"
-                src={separatorImg}
-                alt={separator}
-            />
         </div>
+      </div>
+    </h2>
+
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-6xl mb-16"
+    >
+      <a
+        href="/portfolio-item-1"
+        class="col-span-1 sm:col-span-2 group relative overflow-hidden rounded-lg shadow-lg"
+      >
+        <img
+          src={tattoo_image_1.src}
+          alt="Tatuaje estilo comic"
+          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+        </div>
+      </a>
+
+      <a
+        href="/portfolio-item-2"
+        class="col-span-1 group relative overflow-hidden rounded-lg shadow-lg"
+      >
+        <img
+          src={tattoo_image_2.src}
+          alt="Tatuaje minimalista"
+          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+        </div>
+      </a>
+
+      <a
+        href="/portfolio-item-3"
+        class="col-span-1 group relative overflow-hidden rounded-lg shadow-lg"
+      >
+        <img
+          src={tattoo_image_3.src}
+          alt="Tatuaje floral"
+          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+        </div>
+      </a>
+
+      <a
+        href="/portfolio-item-4"
+        class="col-span-1 group relative overflow-hidden rounded-lg shadow-lg"
+      >
+        <img
+          src={tattoo_image_4.src}
+          alt="Tatuaje estilo blackwork"
+          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+        </div>
+      </a>
+      <a
+        href="/portfolio-item-5"
+        class="col-span-1 group relative overflow-hidden rounded-lg shadow-lg"
+      >
+        <img
+          src={tattoo_image_5.src}
+          alt="Tatuaje estilo blackwork"
+          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+        </div>
+      </a>
+
+      <div
+        class="col-span-1 sm:col-span-2 lg:col-span-3 flex justify-center mt-8"
+      >
+        <a href="#more-work" class="text-white text-5xl animate-bounce">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-12 h-12"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+        </a>
+      </div>
     </div>
-    <TattooCarousel client:load />
-</div>
+    <div class="text-center font-roboto text-lg md:text-xl">
+      <p class="opacity-80">Encuentrame en Pacific Soul, Bogotá, Colombia</p>
+      <p class="opacity-80">Cra. 16a #80 - 94, Edificio Country 82</p>
+    </div>
+    <div class="w-full max-w-6xl mt-16 rounded-lg overflow-hidden shadow-xl">
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5847469922187!2d-74.0576385!3d4.6678806999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bad50e3d09d%3A0xf6ca7449c16c37ff!2sPacific%20Soul%20Tattoo!5e0!3m2!1ses-419!2sco!4v1753929101417!5m2!1ses-419!2sco"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="w-full"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
